@@ -5,6 +5,7 @@ import * as actions from '../actions';
 class UserList extends Component {
 
   componentWillMount() {
+    this.props.fetchNothing();
     this.props.fetchUsers();
   }
 
@@ -33,5 +34,6 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, {
-  fetchUsers: actions.fetchUsers
+  fetchUsers: actions.fetchUsers,
+  fetchNothing: actions.fetchNothing
 })(UserList);

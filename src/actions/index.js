@@ -11,3 +11,9 @@ export function fetchUsers() {
     ]
   });
 }
+
+export function fetchNothing() {
+  return {
+    type: 'noting'
+  };
+}
