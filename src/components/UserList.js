@@ -5,7 +5,7 @@ import * as actions from '../actions';
 class UserList extends Component {
 
   componentWillMount() {
-    this.props.fetchNothing();
+    // this.props.fetchNothing();
     this.props.fetchUsers();
   }
 
