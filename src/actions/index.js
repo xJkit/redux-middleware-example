@@ -1,4 +1,5 @@
-import axios from 'axios';
+// import axios from 'axios';
+import 'isomorphic-fetch';
 import { FETCH_USERS } from './types';
 
 //APIs
@@ -8,7 +9,7 @@ const endpoint = 'users';
 export function fetchUsers() {
   return ({
     type: FETCH_USERS,
-    payload: axios.get(ROOT+endpoint)
+    payload: fetch(ROOT+endpoint)
   });
 }
 

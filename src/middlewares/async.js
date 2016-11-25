@@ -5,11 +5,13 @@ export default store => next => action => {
   }
   console.log('action have payload: ', action);
   action.payload
-    .then( val => {
-    console.log('resolved: ', val)
+    .then( val => val.json())
+    .then( json => {
+    console.log('resolved: ', json)
+    debugger;
     store.dispatch({
       ...action,
-      payload: val.data
+      payload: json,
     })
   }).catch( err => {
     console.log('oh no: ', err);
